@@ -1,5 +1,6 @@
 /* =========================================================
    WPROCESSING WITH BODH
+   MAIN WEBSITE STYLES
 ========================================================= */
 
 * {
@@ -19,14 +20,13 @@ body {
     line-height: 1.6;
 }
 
-
 /* =========================================================
    HEADER
 ========================================================= */
 
 .main-header {
     width: 100%;
-    height: 120px;
+    min-height: 100px;
     padding: 0 4%;
     display: flex;
     align-items: center;
@@ -37,25 +37,16 @@ body {
     z-index: 1000;
 }
 
-
-/* =========================================================
-   BRAND
-========================================================= */
-
 .brand {
     width: 48%;
-    height: 120px;
     display: flex;
     align-items: center;
     overflow: visible;
 }
 
-
-/* SMALL IMAGE */
-
 .brand-image {
-    width: 145px;
-    height: 100px;
+    width: 120px;
+    height: 85px;
     object-fit: contain;
     object-position: center;
     display: block;
@@ -63,17 +54,14 @@ body {
     flex-shrink: 0;
 }
 
-
-/* BRAND TEXT */
-
 .brand-text {
-    margin-left: 6px;
+    margin-left: 8px;
     white-space: nowrap;
 }
 
 .brand-title {
     color: #174b91;
-    font-size: 42px;
+    font-size: 38px;
     line-height: 0.95;
     font-weight: 800;
     letter-spacing: -2px;
@@ -81,16 +69,14 @@ body {
 
 .brand-subtitle {
     color: #1598e5;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.05;
     font-weight: 500;
-    letter-spacing: -1px;
 }
 
 .brand-subtitle span {
     font-weight: 800;
 }
-
 
 /* =========================================================
    NAVIGATION
@@ -101,15 +87,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 35px;
+    gap: 28px;
 }
 
 .navigation a {
     color: #123f76;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
-    white-space: nowrap;
     transition: 0.25s ease;
 }
 
@@ -117,21 +102,15 @@ body {
     color: #1598e5;
 }
 
-
-/* =========================================================
-   LOGIN
-========================================================= */
-
 .header-login {
-    margin-left: 30px;
-    padding: 14px 28px;
+    margin-left: 25px;
+    padding: 12px 25px;
     border: none;
     border-radius: 16px;
     background: #168be5;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 7px 16px rgba(22, 139, 229, 0.20);
     transition: 0.25s ease;
 }
 
@@ -139,7 +118,6 @@ body {
     background: #0d63ae;
     transform: translateY(-2px);
 }
-
 
 /* =========================================================
    HOME
@@ -188,16 +166,15 @@ body {
     font-size: 18px;
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
 .home-buttons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
 }
+
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .primary-btn,
 .outline-btn,
@@ -236,7 +213,6 @@ body {
     background: white;
     color: #0d63ae;
 }
-
 
 /* =========================================================
    HOME CARD
@@ -304,7 +280,6 @@ body {
     font-size: 21px;
 }
 
-
 /* =========================================================
    CONTENT
 ========================================================= */
@@ -336,7 +311,6 @@ body {
 .section-heading span {
     color: #64788c;
 }
-
 
 /* =========================================================
    AWARENESS
@@ -377,7 +351,6 @@ body {
     color: #65788a;
 }
 
-
 /* =========================================================
    VIDEO
 ========================================================= */
@@ -405,12 +378,6 @@ body {
     justify-content: center;
 }
 
-.video-placeholder span {
-    margin-top: 10px;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
 .play-button {
     width: 65px;
     height: 65px;
@@ -421,6 +388,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 25px;
+}
+
+.video-placeholder span {
+    margin-top: 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
 .video-text p {
@@ -438,7 +411,6 @@ body {
 .video-text span {
     color: #64788c;
 }
-
 
 /* =========================================================
    IMPACT
@@ -472,7 +444,6 @@ body {
 .impact-section span {
     color: #d5eaff;
 }
-
 
 /* =========================================================
    PROCESS
@@ -516,7 +487,6 @@ body {
     font-size: 25px;
     font-weight: bold;
 }
-
 
 /* =========================================================
    HUB
@@ -562,7 +532,6 @@ body {
 .hub-section span {
     color: #687c8f;
 }
-
 
 /* =========================================================
    DASHBOARD
@@ -610,7 +579,6 @@ body {
     margin: 35px auto 0;
 }
 
-
 /* =========================================================
    REWARDS
 ========================================================= */
@@ -645,7 +613,6 @@ body {
     font-weight: bold;
 }
 
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -666,7 +633,6 @@ footer small {
     color: #c4def4;
 }
 
-
 /* =========================================================
    MODALS
 ========================================================= */
@@ -684,11 +650,11 @@ footer small {
 
 .modal-box {
     position: relative;
-    width: 450px;
+    width: 500px;
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 92vh;
     overflow-y: auto;
-    padding: 40px;
+    padding: 35px;
     background: white;
     border-radius: 24px;
     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
@@ -749,7 +715,6 @@ footer small {
     margin-top: 10px;
 }
 
-
 /* =========================================================
    CAMERA
 ========================================================= */
@@ -771,6 +736,14 @@ footer small {
     object-fit: cover;
 }
 
+#capturedCanvas {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: contain;
+    background: #071f3d;
+}
+
 .camera-overlay {
     position: absolute;
     left: 50%;
@@ -786,15 +759,7 @@ footer small {
 
 .camera-button {
     width: 100%;
-}
-
-#capturedCanvas {
-    width: 100%;
-    max-height: 300px;
-    display: none;
-    margin: 20px 0;
-    border-radius: 18px;
-    object-fit: contain;
+    margin-top: 10px;
 }
 
 .retake-button {
@@ -802,6 +767,10 @@ footer small {
     width: 100%;
     margin-top: 10px;
 }
+
+/* =========================================================
+   LOADING
+========================================================= */
 
 .loading-bar {
     width: 100%;
@@ -830,34 +799,75 @@ footer small {
     100% {
         transform: translateX(300%);
     }
-
 }
 
-.result-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid #e3eef7;
+/* =========================================================
+   AI RESULT
+========================================================= */
+
+.scanner-result {
+    margin-top: 20px;
 }
 
-.result-row strong {
+.scanner-result h3 {
+    color: #123f76;
+    margin-bottom: 12px;
+}
+
+.analysis-status {
+    color: #687c8f;
+    margin: 7px 0;
+}
+
+.analysis-warning {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff8e7;
+    color: #765d1c;
+    font-size: 13px;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.analysis-item {
+    padding: 16px;
+    background: #f5fbff;
+    border: 1px solid #dcefff;
+    border-radius: 14px;
+}
+
+.analysis-item small {
+    display: block;
+    color: #718497;
+    margin-bottom: 5px;
+}
+
+.analysis-item strong {
+    display: block;
     color: #123f76;
 }
 
-.result-row span {
-    color: #168be5;
-    font-weight: bold;
-    text-align: right;
-}
-
-.result-advice {
+.analysis-recommendation {
     margin-top: 15px;
-    padding: 13px;
-    border-radius: 10px;
+    padding: 16px;
+    border-radius: 14px;
     background: #eaf7ff;
     color: #315a78;
 }
+
+.analysis-recommendation strong {
+    color: #123f76;
+}
+
+/* =========================================================
+   REWARD
+========================================================= */
 
 .reward-earned {
     margin-top: 12px;
@@ -868,7 +878,6 @@ footer small {
     font-weight: bold;
     text-align: center;
 }
-
 
 /* =========================================================
    IMPACT POPUP
@@ -895,7 +904,6 @@ footer small {
     font-size: 14px;
 }
 
-
 /* =========================================================
    VIDEO POPUP
 ========================================================= */
@@ -912,7 +920,6 @@ footer small {
     justify-content: center;
     text-align: center;
 }
-
 
 /* =========================================================
    HUB POPUP
@@ -934,9 +941,8 @@ footer small {
     color: #687c8f;
 }
 
-
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1250px) {
@@ -946,61 +952,50 @@ footer small {
     }
 
     .brand-image {
-        width: 125px;
-        height: 90px;
+        width: 105px;
+        height: 78px;
     }
 
     .brand-title {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .brand-subtitle {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .navigation {
-        gap: 20px;
+        gap: 18px;
     }
 
     .navigation a {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .header-login {
-        margin-left: 18px;
-        padding: 12px 22px;
-        font-size: 16px;
+        margin-left: 15px;
+        padding: 11px 20px;
+        font-size: 15px;
     }
 }
-
-
-/* =========================================================
-   SMALL SCREEN
-========================================================= */
 
 @media (max-width: 950px) {
 
     .main-header {
-        height: 95px;
-        min-height: 95px;
-    }
-
-    .brand {
-        height: 95px;
+        min-height: 90px;
     }
 
     .brand-image {
-        width: 100px;
-        height: 80px;
+        width: 90px;
+        height: 70px;
     }
 
     .brand-title {
         font-size: 25px;
-        letter-spacing: -1px;
     }
 
     .brand-subtitle {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .navigation {
@@ -1039,6 +1034,7 @@ footer small {
 
     .video-placeholder {
         width: 100%;
+        min-width: 0;
     }
 
     .hub-section {
@@ -1047,42 +1043,29 @@ footer small {
     }
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 600px) {
 
     .main-header {
-        height: 82px;
-        min-height: 82px;
+        min-height: 78px;
         padding: 0 10px;
     }
 
-    .brand {
-        height: 82px;
-    }
-
     .brand-image {
-        width: 65px;
-        height: 65px;
-    }
-
-    .brand-text {
-        margin-left: 3px;
+        width: 60px;
+        height: 60px;
     }
 
     .brand-title {
         font-size: 18px;
+        letter-spacing: -1px;
     }
 
     .brand-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .header-login {
-        padding: 8px 14px;
+        padding: 8px 13px;
         font-size: 13px;
         border-radius: 11px;
     }
@@ -1117,10 +1100,6 @@ footer small {
         grid-template-columns: 1fr;
     }
 
-    .video-placeholder {
-        min-width: 100%;
-    }
-
     .process-arrow {
         transform: rotate(90deg);
     }
@@ -1131,5 +1110,9 @@ footer small {
 
     .camera-container {
         height: 260px;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr;
     }
 }
