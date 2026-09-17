@@ -613,50 +613,73 @@
 
     <div id="scannerModal" class="modal">
 
-        <div class="modal-box">
+        <div class="modal-box scanner-modal-box">
 
             <button
                 class="close"
-                onclick="closeModal('scannerModal')">
-
+                onclick="closeCamera()">
                 ×
-
             </button>
 
             <div class="modal-icon">
                 📷
             </div>
 
-            <h2>
-                Scan Your Waste
-            </h2>
+            <h2>Scan Your Waste</h2>
 
             <p>
-                Take a photo or upload your waste image.
+                Take a photo or upload a waste image. The prototype will analyse the image and suggest segregation and processing.
             </p>
+
+            <div class="camera-container">
+                <video id="cameraVideo" autoplay playsinline muted></video>
+                <canvas id="capturedCanvas"></canvas>
+
+                <div class="camera-overlay">
+                    Point the camera at one waste item
+                </div>
+            </div>
+
+            <div class="scanner-controls">
+                <button
+                    type="button"
+                    class="primary-btn camera-button"
+                    onclick="captureWaste()">
+                    📸 Capture Waste
+                </button>
+
+                <button
+                    type="button"
+                    id="retakeButton"
+                    class="outline-btn retake-button"
+                    onclick="retakeWaste()">
+                    🔄 Retake
+                </button>
+            </div>
+
+            <div class="upload-divider">
+                <span>OR</span>
+            </div>
+
+            <label class="upload-label" for="wasteImage">
+                📁 Choose Waste Image
+            </label>
 
             <input
                 type="file"
                 id="wasteImage"
-                accept="image/*"
-                capture="environment">
+                accept="image/*">
 
-            <div class="scanner-result">
-
-                <h3>
-                    🤖 AI Result
-                </h3>
-
+            <div id="scannerResult" class="scanner-result">
+                <h3>🤖 AI Result</h3>
                 <p>
-                    Upload an image to begin classification.
+                    Camera is starting… or choose an image above.
                 </p>
-
             </div>
 
         </div>
 
     </div>
-
 
     <!-- ================= IMPACT ================= -->
 
@@ -798,6 +821,8 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script>
     <script src="script.js"></script>
 
 </body>
