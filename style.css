@@ -45,8 +45,8 @@ body {
 }
 
 .brand-image {
-    width: 180px;
-    height: 95px;
+    width: 300px;
+    height: 100px;
     object-fit: contain;
     object-position: center;
     display: block;
