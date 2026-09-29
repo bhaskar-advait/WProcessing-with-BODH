@@ -41,13 +41,27 @@
                 Awareness
             </a>
 
+            <a href="#why-bodh">
+                Why BODH?
+            </a>
+
             <a href="#process">
                 How It Works
+            </a>
+
+            <a href="#dashboard">
+                Dashboard
             </a>
 
             <a href="#rewards">
                 Rewards
             </a>
+
+            <button
+                class="demo-nav-btn"
+                onclick="openDemoMode()">
+                ⚡ Demo Mode
+            </button>
 
         </nav>
 
@@ -99,6 +113,14 @@
 
                     <button
                         class="outline-btn"
+                        onclick="openReportModal()">
+
+                        🚨 Report Hotspot
+
+                    </button>
+
+                    <button
+                        class="white-btn-home"
                         onclick="openImpact()">
 
                         🌍 Know The Impact
@@ -316,6 +338,57 @@
         </section>
 
 
+        <!-- ================= WHY BODH ================= -->
+
+        <section id="why-bodh" class="content-section why-bodh-section">
+
+            <div class="section-heading">
+
+                <p>
+                    OUR PHILOSOPHY
+                </p>
+
+                <h2>
+                    Why BODH?
+                </h2>
+
+                <span>
+                    "Technology is our medium, not our objective." Most waste apps only report trash location. BODH connects awareness, AI identification, personal action, and smart collection response into one unified loop.
+                </span>
+
+            </div>
+
+            <div class="why-bodh-grid">
+
+                <div class="why-card">
+                    <div class="why-icon">🧠</div>
+                    <h3>Awareness First</h3>
+                    <p>Understand the material, environmental impact, and consequences before disposal.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🤖</div>
+                    <h3>AI-Assisted Guidance</h3>
+                    <p>Instant computer vision classification and material-specific segregation rules.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🚨</div>
+                    <h3>Citizen Hotspots & Water Waste</h3>
+                    <p>Report dumped or floating solid waste with GPS location and photo verification.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🚚</div>
+                    <h3>Smart Response Routing</h3>
+                    <p>Match verified hotspots with nearby collection routes to optimize recovery efficiency.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- ================= PROCESS ================= -->
 
         <section id="process" class="content-section">
@@ -327,11 +400,11 @@
                 </p>
 
                 <h2>
-                    Waste Processing Journey
+                    Connected Waste Processing Journey
                 </h2>
 
                 <span>
-                    Collection is only the beginning.
+                    Collection is only part of the loop. BODH links every stage from awareness to recovery.
                 </span>
 
             </div>
@@ -340,41 +413,65 @@
             <div class="process-container">
 
                 <div class="process-box">
-                    <div>🗑️</div>
-                    <h3>Collect</h3>
-                    <p>Waste enters the system.</p>
+                    <div>🧠</div>
+                    <h3>1. Understand</h3>
+                    <p>Material & Impact</p>
                 </div>
 
                 <div class="process-arrow">→</div>
 
                 <div class="process-box">
                     <div>🤖</div>
-                    <h3>AI Classify</h3>
-                    <p>Identify the waste.</p>
+                    <h3>2. Identify</h3>
+                    <p>AI Classification</p>
                 </div>
 
                 <div class="process-arrow">→</div>
 
                 <div class="process-box">
                     <div>🔍</div>
-                    <h3>Assess</h3>
-                    <p>Check condition.</p>
+                    <h3>3. Assess</h3>
+                    <p>Check Condition</p>
                 </div>
 
                 <div class="process-arrow">→</div>
 
                 <div class="process-box">
-                    <div>📍</div>
-                    <h3>Route</h3>
-                    <p>Find suitable processing.</p>
+                    <div>💡</div>
+                    <h3>4. Act</h3>
+                    <p>Segregation / Reuse</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-box">
+                    <div>🚨</div>
+                    <h3>5. Report</h3>
+                    <p>Hotspot / River Debris</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-box">
+                    <div>🚚</div>
+                    <h3>6. Respond</h3>
+                    <p>Route Opportunity</p>
                 </div>
 
                 <div class="process-arrow">→</div>
 
                 <div class="process-box">
                     <div>♻️</div>
-                    <h3>Recover</h3>
-                    <p>Reuse, recycle or compost.</p>
+                    <h3>7. Recover</h3>
+                    <p>Recycle / Compost</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-box">
+                    <div>📈</div>
+                    <h3>8. Track</h3>
+                    <p>Verification & Dashboard</p>
                 </div>
 
             </div>
@@ -420,17 +517,21 @@
 
         <!-- ================= DASHBOARD ================= -->
 
-        <section class="dashboard-section">
+        <section id="dashboard" class="dashboard-section">
 
             <div class="section-heading">
 
                 <p>
-                    USER DASHBOARD
+                    PERSONAL BODH DASHBOARD
                 </p>
 
                 <h2>
-                    Your Waste Journey
+                    Your Waste & Action Tracking
                 </h2>
+
+                <span>
+                    Track your personal activity, AI scans, hotspot reports, and reward progress.
+                </span>
 
             </div>
 
@@ -438,15 +539,27 @@
             <div class="dashboard-grid">
 
                 <div class="dashboard-card">
-                    <span>♻️</span>
-                    <strong>12.5 kg</strong>
-                    <small>Waste Submitted</small>
+                    <span>📷</span>
+                    <strong id="dashScans">12</strong>
+                    <small>AI Scans Completed</small>
                 </div>
 
                 <div class="dashboard-card">
                     <span>🌱</span>
                     <strong>8.2 kg</strong>
-                    <small>Waste Diverted</small>
+                    <small>Waste Diverted (Est.)</small>
+                </div>
+
+                <div class="dashboard-card">
+                    <span>🚨</span>
+                    <strong id="dashReports">3</strong>
+                    <small>Hotspots Reported</small>
+                </div>
+
+                <div class="dashboard-card">
+                    <span>✅</span>
+                    <strong id="dashResolved">2</strong>
+                    <small>Reports Resolved</small>
                 </div>
 
                 <div class="dashboard-card">
@@ -464,13 +577,40 @@
             </div>
 
 
-            <button
-                class="primary-btn scan-dashboard"
-                onclick="openScanner()">
+            <div class="dashboard-action-buttons">
 
-                📷 Scan / Upload Waste
+                <button
+                    class="primary-btn"
+                    onclick="openScanner()">
+                    📷 Scan Waste Item
+                </button>
 
-            </button>
+                <button
+                    class="outline-btn"
+                    onclick="openReportModal()">
+                    🚨 Report Hotspot / River Debris
+                </button>
+
+                <button
+                    class="white-btn"
+                    onclick="openTrackerModal()">
+                    📍 View Hotspot Status & Verification
+                </button>
+
+            </div>
+
+
+            <!-- RECENT REPORTS / ACTIVITY CONTAINER -->
+
+            <div class="dashboard-activity">
+
+                <h3>📋 Your Recent Reports & Activity</h3>
+
+                <div id="dashReportsList" class="dash-reports-list">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+            </div>
 
         </section>
 
@@ -816,6 +956,417 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script>
     <script src="script.js"></script>
+
+<!-- ================= IMPACT MIRROR ================= -->
+
+<div id="impactMirrorModal" class="modal">
+
+    <div class="modal-box impact-mirror-box">
+
+        <button
+            class="close"
+            onclick="closeModal('impactMirrorModal')">
+            ×
+        </button>
+
+        <div class="impact-mirror-icon">
+            🌍
+        </div>
+
+        <p class="impact-mirror-label">
+            BODH — IMPACT MIRROR
+        </p>
+
+        <h2>
+            Before You Throw, See The Impact
+        </h2>
+
+        <p class="impact-mirror-intro">
+            Your waste does not simply disappear.
+            What happens next depends on its material
+            and how it is managed.
+        </p>
+
+
+        <!-- DETECTED WASTE -->
+
+        <div class="impact-detected">
+
+            <span>
+                🔍 You scanned
+            </span>
+
+            <strong id="impactWasteName">
+                Waste item
+            </strong>
+
+        </div>
+
+
+        <!-- IMPACT CARDS -->
+
+        <div class="impact-mirror-grid">
+
+            <div class="impact-mirror-card">
+
+                <div class="impact-card-icon">
+                    🐾
+                </div>
+
+                <h3>
+                    Animals
+                </h3>
+
+                <p>
+                    Improperly managed waste can expose
+                    animals to harmful materials through
+                    ingestion or physical contact.
+                </p>
+
+            </div>
+
+
+            <div class="impact-mirror-card">
+
+                <div class="impact-card-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Water & Soil
+                </h3>
+
+                <p>
+                    Poor waste management can contribute
+                    to contamination of surrounding
+                    soil and water.
+                </p>
+
+            </div>
+
+
+            <div class="impact-mirror-card">
+
+                <div class="impact-card-icon">
+                    🫁
+                </div>
+
+                <h3>
+                    Human Health
+                </h3>
+
+                <p>
+                    Unsafe handling and disposal can create
+                    exposure and contamination risks.
+                </p>
+
+            </div>
+
+
+            <div class="impact-mirror-card">
+
+                <div class="impact-card-icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Resources
+                </h3>
+
+                <p>
+                    When recoverable materials are discarded,
+                    useful resources can be lost from the
+                    recovery cycle.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- WHAT TO DO -->
+
+        <div class="impact-action-box">
+
+            <div class="impact-action-icon">
+                💡
+            </div>
+
+            <div>
+
+                <span>
+                    WHAT SHOULD YOU DO?
+                </span>
+
+                <strong id="impactActionTitle">
+                    Check the correct processing route.
+                </strong>
+
+                <p id="impactActionText">
+                    Separate the material and follow
+                    the appropriate local waste-processing
+                    option.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROCESSING ROUTE -->
+
+        <div class="impact-route">
+
+            <span>
+                📍 Recommended route
+            </span>
+
+            <strong id="impactRouteText">
+                Manual verification
+            </strong>
+
+        </div>
+
+
+        <div class="impact-mirror-buttons">
+
+            <button
+                class="primary-btn"
+                onclick="closeModal('impactMirrorModal')">
+
+                ✓ I Understand
+
+            </button>
+
+            <button
+                class="outline-btn"
+                onclick="closeModal('impactMirrorModal'); openReportModal();">
+
+                🚨 Report Hotspot
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= REPORT HOTSPOT MODAL ================= -->
+
+<div id="reportModal" class="modal">
+
+    <div class="modal-box report-modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('reportModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🚨
+        </div>
+
+        <h2>Report Waste Hotspot</h2>
+
+        <p>
+            Report misplaced, dumped, or floating solid waste to help coordinate collection and processing.
+        </p>
+
+        <form id="reportForm" onsubmit="handleReportSubmit(event)">
+
+            <div class="form-group">
+                <label for="reportCategory">Waste Category / Material</label>
+                <select id="reportCategory" required>
+                    <option value="Plastic Waste">Plastic Waste (Bottles, Packaging)</option>
+                    <option value="Floating Solid Waste">Floating Solid Waste (River / Canal Debris)</option>
+                    <option value="Organic / Wet Waste">Organic / Wet Waste</option>
+                    <option value="E-Waste / Batteries">E-Waste / Batteries</option>
+                    <option value="Mixed Dumped Waste">Mixed Dumped Debris</option>
+                </select>
+            </div>
+
+            <div class="form-checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="isFloatingWaste">
+                    <span>🌊 Floating / River Solid Waste (Plastic Bottles, Debris)</span>
+                </label>
+                <small class="form-disclaimer">
+                    Note: BODH tracks visible solid floating debris. Sewage and chemical effluents require municipal effluent treatment systems.
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="reportLocation">Location / Address</label>
+                <div class="location-input-group">
+                    <input type="text" id="reportLocation" placeholder="e.g. Sector 12 Market / Riverbank Bridge" required>
+                    <button type="button" class="outline-btn gps-btn" onclick="useCurrentLocation()">
+                        📍 GPS Location
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reportSeverity">Accumulation Severity</label>
+                <select id="reportSeverity">
+                    <option value="Low">Low (Isolated Item)</option>
+                    <option value="Medium" selected>Medium (Small Pile / Overflowing Bin)</option>
+                    <option value="High">High (Large Dumped Site)</option>
+                    <option value="Critical">Critical (Blocking Drainage / Waterway)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="reportDescription">Description / Additional Notes</label>
+                <textarea id="reportDescription" rows="3" placeholder="Describe the waste situation, access points, or hazards..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Photo Verification</label>
+                <div id="reportImagePreviewContainer" class="report-image-preview">
+                    <div class="no-photo-placeholder">📷 Scanner photo attached or upload photo</div>
+                </div>
+                <input type="file" id="reportImageInput" accept="image/*" onchange="previewReportImage(event)">
+            </div>
+
+            <button type="submit" class="primary-btn full-button">
+                🚀 Submit Hotspot Report
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SMART ROUTING MODAL ================= -->
+
+<div id="routingModal" class="modal">
+
+    <div class="modal-box routing-modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('routingModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🚚
+        </div>
+
+        <p class="modal-label-badge">
+            BODH — SMART RESPONSE DEMO
+        </p>
+
+        <h2>Smart Response & Opportunity Routing</h2>
+
+        <p class="routing-intro">
+            Instead of dispatching a new vehicle, BODH checks if an existing collection vehicle is nearby with available capacity and compatible waste stream.
+        </p>
+
+        <div id="routingMatchContainer" class="routing-match-box">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+        <div class="routing-sim-disclaimer">
+            * Prototype / Simulated Routing Demo
+        </div>
+
+        <button
+            class="primary-btn full-button"
+            onclick="closeModal('routingModal'); openTrackerModal();">
+            📍 View Hotspot Status Tracker
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TRACKER & BEFORE/AFTER MODAL ================= -->
+
+<div id="trackerModal" class="modal">
+
+    <div class="modal-box tracker-modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('trackerModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            📍
+        </div>
+
+        <h2>Collection Status & Cleanup Verification</h2>
+
+        <p>
+            Track report progress from citizen reporting to collection, recovery, and visual before/after verification.
+        </p>
+
+        <div id="trackerContent" class="tracker-content-area">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= INTERACTIVE DEMO MODE MODAL ================= -->
+
+<div id="demoModal" class="modal">
+
+    <div class="modal-box demo-modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal('demoModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            ⚡
+        </div>
+
+        <p class="modal-label-badge">
+            HACKATHON JUDGING WALKTHROUGH
+        </p>
+
+        <h2>Interactive 3-Minute Demo Mode</h2>
+
+        <p>
+            Experience the complete BODH connected journey from AI Scan ➔ Impact Mirror ➔ Citizen Report ➔ Smart Response Routing ➔ Cleanup Verification!
+        </p>
+
+        <div class="demo-steps-preview">
+            <div class="demo-step-pill">1. AI Waste Scan</div>
+            <div class="demo-step-pill">2. Impact Mirror</div>
+            <div class="demo-step-pill">3. Report Hotspot</div>
+            <div class="demo-step-pill">4. Smart Routing</div>
+            <div class="demo-step-pill">5. Before/After Verification</div>
+        </div>
+
+        <div class="demo-controls">
+            <button
+                class="primary-btn full-button demo-start-btn"
+                onclick="startDemoWalkthrough()">
+                🚀 Launch Guided Walkthrough
+            </button>
+        </div>
+
+        <div class="routing-sim-disclaimer" style="margin-top: 15px;">
+            * All vehicle locations and status transitions in demo mode use clearly labelled simulated data.
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 
